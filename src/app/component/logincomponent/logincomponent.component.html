@@ -1,0 +1,32 @@
+<div class="row" style="margin: 20vh;">
+    <div class="col-md-6 offset-md-3 div-card">
+        <form [formGroup]="loginForm" novalidate>
+            <div class="col-auto">
+                <label class="col-form-label">Username</label>
+            </div>
+            <div class="col-auto">
+                <input type="text" class="form-control" formControlName="frm_Username">
+            </div>
+               <div *ngIf="submitted && f.frm_Username.errors?.required"  class="text-danger">
+                    Username is required.
+                </div>
+         
+            <div class="col-auto">
+                <label class="col-form-label">Password</label>
+            </div>
+            <div class="col-auto">
+                <input type="password" class="form-control" formControlName="frm_Password">
+               <div *ngIf="submitted && f.frm_Password.errors?.required"  class="text-danger">
+                    Password is required.
+                </div>
+             </div>
+            <div class="col-auto">
+                <label class="col-form-label" style="float: left;">Forget Password</label>
+                <label class="col-form-label" style="float: right;">New User?</label>
+            </div>
+            <div class="mb-1 mt-5">
+                <button class="btn btn-primary" (click)="Login()">Login</button>
+            </div>
+        </form>
+    </div>
+</div>

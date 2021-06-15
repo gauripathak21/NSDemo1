@@ -1,0 +1,51 @@
+<div class="row">
+    <div class="col-md-6 offset-md-3 div-card">
+        <form [formGroup]="addCustomerForm" novalidate>
+            <div class="col-auto">
+                <label class="col-form-label">Name</label>
+            </div>
+            <div class="col-auto">
+                <input type="text" class="form-control" formControlName="frm_Name">
+            </div>
+               <div *ngIf="submitted && f.frm_Name.errors?.required"  class="text-danger">
+                    Name is required.
+                </div>
+         
+            <div class="col-auto">
+                <label class="col-form-label">Email</label>
+            </div>
+            <div class="col-auto">
+                <input type="email" class="form-control" formControlName="frm_Email">
+               <div *ngIf="submitted && f.frm_Email.errors?.required"  class="text-danger">
+                    Email is required.
+                </div>
+             </div>
+           
+             <div class="col-auto">
+                <label class="col-form-label">Number</label>
+            </div>
+            <div class="col-auto">
+                <input type="email" class="form-control" formControlName="frm_Number">
+               <div *ngIf="submitted && f.frm_Number.errors?.required"  class="text-danger">
+                Number is required.
+                </div>
+             </div>
+
+             <div class="col-auto">
+                <label class="col-form-label">PAN</label>
+            </div>
+            <div class="col-auto">
+                <input type="email" class="form-control" formControlName="frm_PAN">
+               <div *ngIf="submitted && f.frm_PAN.errors?.required"  class="text-danger">
+                PAN is required.
+                </div>
+             </div>
+            <div class="mb-1 mt-5">
+                <button class="btn btn-primary" (click)="AddCustomer()">Add Customer</button>
+            </div>
+        </form>
+    </div>
+   <div *ngFor="let item of addCustomerDataArr">
+        <label>{{item.name}} </label>
+   </div>
+</div>

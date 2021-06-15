@@ -1,0 +1,15 @@
+.wrapper{
+  display: flex;
+  background: #dedede;
+}
+.block{
+  background: #fff;
+  border: 1px solid #ddd;
+}
+
+.div-card{
+  border: 1px solid #ddd;
+    box-shadow: 3px 2px 10px 0px #7c7e80;
+    border-radius: 5px;
+    background: #ddd;
+}
