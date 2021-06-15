@@ -12,7 +12,7 @@ import { AppServicesService } from './service/app-services.service';
 
 export class AppComponent {
    isValidUser:boolean=false;
-   title:string="";
+   title:string="my-first-project";
    constructor(private loginCmp:LogincomponentComponent,
                private router:Router,
                private appService:AppServicesService) {

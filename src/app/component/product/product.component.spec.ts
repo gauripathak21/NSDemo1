@@ -1,4 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { StoreModule } from '@ngrx/store';
+import { counterReducer } from 'src/app/counter.reducer';
+
 
 import { ProductComponent } from './product.component';
 
@@ -8,6 +11,9 @@ describe('ProductComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      imports: [
+        StoreModule.forRoot({})
+      ],
       declarations: [ ProductComponent ]
     })
     .compileComponents();

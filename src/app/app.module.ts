@@ -8,13 +8,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatInputModule } from '@angular/material/input';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatFormFieldModule } from '@angular/material/form-field';
+
 import { HomeComponentComponent } from './component/home-component/home-component.component';
 import { DemoMaterialModule } from './material-module';
 import { AddCustomerComponent } from './component/add-customer/add-customer.component';
-import { NavBarComponent } from './utlities/nav-bar/nav-bar.component';
+
 import { StoreModule } from '@ngrx/store';
-//import { addProductReducer } from './reducers/product.reducer';
+
 import { MyCounterComponent } from './my-counter/my-counter.component';
 import { counterReducer } from './counter.reducer';
 @NgModule({
@@ -23,7 +23,6 @@ import { counterReducer } from './counter.reducer';
     LogincomponentComponent,
     HomeComponentComponent,
     AddCustomerComponent,
-    NavBarComponent,
     MyCounterComponent
   ],
   imports: [
