@@ -33,5 +33,25 @@ describe('LogincomponentComponent', () => {
   it('login values must entred', () => {
     fixture = TestBed.createComponent(LogincomponentComponent);
     expect(component).toBeTruthy();
-  });
+    });
+
+  describe('Test:Login Form',()=>{
+    it('Values should not be empty', () => {
+      component.loginForm.controls.frm_Username.setValue('');
+      component.loginForm.controls.frm_Password.setValue('');
+      expect(component.loginForm.valid).toBeFalsy();
+     });
+
+     it('It should Validate login form', () => {
+      component.loginForm.controls.frm_Username.setValue('abc');
+      component.loginForm.controls.frm_Password.setValue('abc@123');
+      expect(component.loginForm.controls.frm_Username.value).toEqual('abc');
+      expect(component.loginForm.controls.frm_Password.value).toEqual('abc@123');
+
+      expect(component.loginForm.valid).toEqual(expect.anything());
+     });
+     
+     
+  })
+
 });

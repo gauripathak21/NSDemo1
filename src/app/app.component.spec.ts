@@ -9,6 +9,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { Router } from '@angular/router';
 
 import { RouterTestingModule } from '@angular/router/testing';
 import { StoreModule } from '@ngrx/store';
@@ -40,10 +41,28 @@ describe('AppComponent', () => {
       providers: [LogincomponentComponent],
     }).compileComponents();
   });
-
+  //For Title Pass
   it(`should have as title 'my-first-project'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
     expect(app.title).toEqual('my-first-project');
   });
+
+  //For Title Failure
+  it(`should not have null or undefined'`, () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    expect(app.title).toBeTruthy();
+  });
+  //check URL
+  it(`router link unavailble'`, () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    expect(app.title).toBeTruthy();
+    const router = TestBed.inject(Router);
+    const mockUrlTree = router.parseUrl('');
+    
+  });
+
+  
 });
